@@ -32,4 +32,11 @@ public class MoodAnalyserTest {
         System.out.println(result);
         Assertions.assertEquals("HAPPY", result);
     }
+    @Test
+    public void givenNewMessage_WhenProper_ShouldReturnNull() {
+        MoodAnalyser moodAnalyser = new MoodAnalyser(null);
+        String result = moodAnalyser.moodAnalyse();
+        System.out.println(result);
+        Assertions.assertEquals(null, result);
+    }
 }
