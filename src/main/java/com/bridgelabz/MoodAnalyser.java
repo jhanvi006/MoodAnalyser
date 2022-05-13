@@ -8,6 +8,6 @@ public class MoodAnalyser {
         } else if (message.contains("Happy")) {
             return "HAPPY";
         } else
-            return null;
+            return "HAPPY";
     }
 }
