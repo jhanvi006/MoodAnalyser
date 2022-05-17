@@ -49,4 +49,14 @@ public class MoodAnalyserTest {
             System.out.println(e.getMessage());
         }
     }
+    @Test
+    public void givenEmptyMessage_WhenProper_ShouldReturnExceptionHandled() throws MoodAnalyserException {
+        MoodAnalyser moodAnalyser = new MoodAnalyser("");
+        try {
+            String result = moodAnalyser.moodAnalyse();
+            Assertions.assertEquals(MoodAnalyserException.ExceptionType.EMPTY,result);
+        } catch (MoodAnalyserException e) {
+            System.out.println(e.getMessage());
+        }
+    }
 }
