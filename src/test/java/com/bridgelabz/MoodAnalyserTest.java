@@ -44,9 +44,8 @@ public class MoodAnalyserTest {
         MoodAnalyser moodAnalyser = new MoodAnalyser(null);
         try {
             String result = moodAnalyser.moodAnalyse();
-            Assertions.assertEquals("HAPPY", result);
-        }
-        catch (MoodAnalyserException e){
+            Assertions.assertEquals(MoodAnalyserException.ExceptionType.NULL,result);
+        } catch (MoodAnalyserException e) {
             System.out.println(e.getMessage());
         }
     }
